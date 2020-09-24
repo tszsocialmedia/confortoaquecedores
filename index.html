@@ -188,6 +188,21 @@
       font-size: 150px;
     }
   }
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:50%;
+    width:100%;
+    position:absolute;
+}
+
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -299,7 +314,7 @@ por um atendimento de qualidade para melhor atender às necessidades dos nossos 
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4>Assistência Técnica</h4>
-	  <p>Oferecemos serviços autorizados pelas 4 melhores marcas do Brasil!</p>
+    <p>Oferecemos serviços autorizados pelas 4 melhores marcas do Brasil!</p>
     </div>
   </div>
   <br>
@@ -434,6 +449,11 @@ por um atendimento de qualidade para melhor atender às necessidades dos nossos 
   </div>
 </div>
 
+<!-- Image of location/map -->
+<div class="map-responsive">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9612911744966!2d-38.43504994956571!3d-12.974327663334494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161a527061e809%3A0x56ce2de1f89effe3!2sR.%20Prof.%20Pinto%20de%20Aguiar%2C%202475%20-%20Boca%20do%20Rio%2C%20Salvador%20-%20BA%2C%2041710-000!5e0!3m2!1spt-BR!2sbr!4v1600906012768!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">Contatos</h2>
@@ -463,8 +483,9 @@ por um atendimento de qualidade para melhor atender às necessidades dos nossos 
   </div>
 </div>
 
-<!-- Image of location/map -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+
+
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
