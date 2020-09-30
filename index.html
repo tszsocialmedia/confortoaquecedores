@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>Bootstrap Theme Company Page</title>
+  <title>Conforto Aquecedores</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,6 +14,18 @@
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
+  }
+
+  .hvr-bob {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+  } 
+
+  .nomargin {
+    margin: 0 auto;
   }
   h2 {
     font-size: 24px;
@@ -42,6 +53,10 @@
   }
   .bg-grey {
     background-color: #f6f6f6;
+  }
+
+  .bg-white{
+    background-color: #ffffff
   }
   .logo-small {
     color: #f4511e;
@@ -189,23 +204,9 @@
       font-size: 150px;
     }
   }
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:50%;
-    width:100%;
-    position:absolute;
-
-}
-
 
   </style>
+  
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -217,7 +218,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Conforto Aquecedores</a>
+      <a  class="navbar-brand" href="https://www.confortoaquecedores.com.br"> <img src="https://imgur.com/a/pyka9de" class="nomargin hvr-bob" alt="Conforto Aquecedores"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -229,6 +230,12 @@
     </div>
   </div>
 </nav>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://bit.ly/34bCqaP" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+  z-index:1000;" target="_blank">
+<i style="margin-top:16px" class="fa fa-whatsapp"></i>
+</a>
 
 <div class="jumbotron text-center">
   <h1>Conforto Aquecedores</h1> 
@@ -299,7 +306,6 @@ por um atendimento de qualidade para melhor atender às necessidades dos nossos 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
   <h2>Serviços</h2>
-  <h4>Nossos Serviços</h4>
   <br>
   <div class="row slideanim">
     <div class="col-sm-4">
@@ -308,12 +314,12 @@ por um atendimento de qualidade para melhor atender às necessidades dos nossos 
       <p>Vendemos os melhores aquecedores para garantir o seu conforto!</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4>Instalações</h4>
       <p>Contamos com uma equipe de profissionais experientes e capacitados!</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
       <h4>Assistência Técnica</h4>
     <p>Oferecemos serviços autorizados pelas 4 melhores marcas do Brasil!</p>
     </div>
@@ -384,20 +390,15 @@ por um atendimento de qualidade para melhor atender às necessidades dos nossos 
 </div>
 
 
-<!-- Image of location/map -->
-<div class="map-responsive">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9612911744966!2d-38.43504994956571!3d-12.974327663334494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161a527061e809%3A0x56ce2de1f89effe3!2sR.%20Prof.%20Pinto%20de%20Aguiar%2C%202475%20-%20Boca%20do%20Rio%2C%20Salvador%20-%20BA%2C%2041710-000!5e0!3m2!1spt-BR!2sbr!4v1600906012768!5m2!1spt-BR!2sbr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-</div>
-
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey" >
-  <h2 class="text-center">Contato</h2>
+<div id="contact" class="container-fluid bg-white" >
+  <h2 class="text-center">Fale conosco</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Fale conosco e contrate os nossos serviços!</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Salvador, BA</p>
-      <p><span class="glyphicon glyphicon-phone"></span> "NUMERO AQUI" </p>
-      <p><span class="glyphicon glyphicon-envelope"></span> "EMAIL AQUI" </p>
+      <p><span class="glyphicon glyphicon-phone"></span> 71 3208-2350 / 99664-4232</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> contato@confortoaquecedores.com </p>
     </div>
   </div>
 </div>
