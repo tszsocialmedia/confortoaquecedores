@@ -54,7 +54,7 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active">
+        <div class="item active ">
         <img src="https://cdn.discordapp.com/attachments/757709700870570007/763537309257039902/aquecedores_slide_1.png" style="width:100%;">
       </div>
 
@@ -79,7 +79,6 @@
    </div>
   </div>
   </header>
-</div>
 
 
 
@@ -91,7 +90,7 @@
       <h4>Somos uma empresa com vendas e serviços autorizados pelas melhores marcas de aquecedores do Brasil. Contamos com uma equipe de profissionais experientes e capacitados para a realização de serviços como instalação e manutenção de aquecedores de água, fogões e cooktops. Prezamos por um atendimento de qualidade para melhor atender às necessidades dos nossos clientes.</h4><br>
     </div>
     <div class="col-sm-4">
-      <img src="https://media.discordapp.net/attachments/757710846607753256/763542531341418496/logo_site_hugo.png?width=960&height=322" style="width: 90%">
+      <img src="https://media.discordapp.net/attachments/757710846607753256/763542531341418496/logo_site_hugo.png?width=960&height=322" style="width: 94%">
     </div>
   </div>
 </div>
@@ -99,7 +98,7 @@
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-    <img src="https://cdn.discordapp.com/attachments/760671431100334120/765660522409885716/soldier.png" style="width: 60%">
+    <img src="https://cdn.discordapp.com/attachments/760671431100334120/765660522409885716/soldier.png" style="width: 40%">
     </div>
     <div class="col-sm-8">
       <h2>Nossos Valores</h2><br>
@@ -172,7 +171,6 @@
       <h4>Manutenção</h4>
     </div>
   </div>
-
   <br>
 
 <!-- Container  (Portfolio Section) <div id="portfolio" class="container-fluid text-center bg-grey">
@@ -307,25 +305,29 @@
     <div class="col-sm-5">
       <p><h3>Contrate os nossos serviços!</h3></p>
       <p><span class="glyphicon glyphicon-map-marker bg-orange"></span> R. Professor Pinto de Aguiar - Boca do Rio - Salvador/BA</p>
-      <p><span class="glyphicon glyphicon-phone bg-orange"></span> 71 3208-2350 / 71 99664-4232</p>
-      <p><span class="glyphicon glyphicon-envelope bg-orange"></span> contato@confortoaquecedores.com</p>
+      <p><span class="glyphicon glyphicon-phone bg-orange"></span> 71 3208-2350 /71 99964-4232</p>
+      <p><span class="glyphicon glyphicon-envelope bg-orange"></span>contato@confortoaquecedores.com</p>
     </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+
+    <!-- -->
+    <form class="contato" name="formtest" action="php/contato.php" method="post"> 
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comentário" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Enviar</button>
+          </div>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comentário" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Enviar</button>
-        </div>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -378,12 +380,13 @@ $(document).ready(function(){
         }
     });
   });
+
+
 })
 </script>
 
 </body>
 </html>
-
 <style>
 body {
 
@@ -667,3 +670,56 @@ body {
   }
 
   </style>
+
+<?php
+
+try{
+
+	if (isset($_POST['bt_enviar'])) {
+		
+		$nome = $_POST['nome'];
+		$email = $_POST['email'];
+		$assunto = $_POST['assunto']; 
+		$mensagem = $_POST['men'];
+		//====================================================
+		
+		//REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
+		//==================================================== 
+		$email_remetente = "contato@confortoaquecedores.com"; // deve ser uma conta de email do seu dominio 
+		//====================================================
+		
+		//Configurações do email, ajustar conforme necessidade
+		//==================================================== 
+		$email_destinatario = "contato@confortoaquecedores.com"; // pode ser qualquer email que receberá as mensagens
+		$email_reply = "$email"; 
+		$email_assunto = "Contato Produtora"; // Este será o assunto da mensagem
+		//====================================================
+		
+		//Monta o Corpo da Mensagem
+		//====================================================
+		$email_conteudo = "Nome = $nome \n"; 
+		$email_conteudo .= "Email = $email \n";
+		$email_conteudo .= "Assunto = $assunto \n"; 
+		$email_conteudo .= "Mensagem = $mensagem \n"; 
+		//====================================================
+		
+		//Seta os Headers (Alterar somente caso necessario) 
+		//==================================================== 
+		$email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+		//====================================================
+		
+		//Enviando o email 
+		//==================================================== 
+		mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers);
+		//====================================================
+
+		header("location: ../index.html");
+	} 
+
+	die();
+} catch (phpmailerException $e) {
+    die();
+} catch (Exception $e) {
+    die();
+}
+?>
