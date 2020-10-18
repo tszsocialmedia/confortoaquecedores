@@ -84,7 +84,7 @@
 <div id="about" class="container-fluid" style="background-color: #FFFFFF;">
   <div class="row">
     <div class="col-sm-8">
-      <h2>Quem somos</h2><br>
+      <h2 style="text-align:center; ">Quem somos</h2><br>
       <h4>Somos uma empresa com vendas e serviços autorizados pelas melhores marcas de aquecedores do Brasil. Contamos com uma equipe de profissionais experientes e capacitados para a realização de serviços como instalação e manutenção de aquecedores de água, fogões e cooktops. Prezamos por um atendimento de qualidade para melhor atender às necessidades dos nossos clientes.</h4><br>
     </div>
     <div class="col-sm-4">
@@ -99,7 +99,7 @@
     <img src="https://cdn.discordapp.com/attachments/760671431100334120/765660522409885716/soldier.png" style="width: 40%">
     </div>
     <div class="col-sm-8">
-      <h2>Nossos Valores</h2><br>
+      <h2 style="text-align:center; ">Nossos Valores</h2><br>
       <h4>Com uma equipe altamente especializada, estamos um passo a frente para qualquer desafio! Nosso objetivo é trazer excelência para nossos serviços, prezar pela qualidade de nossos produtos e satisfação de nossos clientes. Temos orgulho de sermos uma empresa referência na área de aquecimento a gás, reconhecida como a melhor opção por nossos clientes, colaboradores e fornecedores.</h4>
       <br>
     </div>
@@ -298,23 +298,29 @@
 >
 <-- Container (Contato) -->
 <div id="contact" class="container-fluid bg-grey" style="text-align:left;">
-  <h2 class="text-center">FALE CONOSCO</h2>
+  <h5 class="text-center">FALE CONOSCO</h5>
   <div class="row">
     <div class="col-sm-5">
-      <p><h4>Contrate os nossos serviços!</h4></p>
+      <p><h3>Contrate os nossos serviços!</h3></p>
       <p><span class="glyphicon glyphicon-map-marker bg-orange"></span> R. Professor Pinto de Aguiar - Boca do Rio - Salvador/BA</p>
-      <p><span class="glyphicon glyphicon-phone bg-orange"></span> 71 3208-2350 / 71 99664-4232</p>
-      <p><span class="glyphicon glyphicon-envelope bg-orange"></span> contato@confortoaquecedores.com</p>
+      <p><span class="glyphicon glyphicon-earphone bg-orange"></span> 71 3208-2350</p>
+      <p><span class="glyphicon glyphicon-phone bg-orange"></span>71 99664-4232</p>
+      <p><span class="glyphicon glyphicon-envelope bg-orange"></span> <a href="mailto:contato@confortoaquecedores.com? cc=contato@confortoaquecedores.com&subject=">contato@confortoaquecedores.com</p>
     </div>
     
         <!--email -->
     <div class="col-sm-2 slideanim text-center">
-    <a href="mailto:contato@confortoaquecedores.com? cc=contato@confortoaquecedores.com&subject="><button style="background:#f4511e; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 20px;">Nos Envie um E-mail</button></a>
+    <a href="mailto:contato@confortoaquecedores.com? cc=contato@confortoaquecedores.com&subject="><button style="background:#f4511e; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Nos Envie um E-mail!</button></a>
+    </div>
+    <div class="col-sm-5 slideanim" style="text-align:right;">
+     <p><h3 style="text-align: center;">Onde estamos</h3></p>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.975497096807!2d-38.432045191302876!3d-12.974986267221036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161a4dbc053f7d%3A0x4b0d7044ec91b7e6!2sR.%20Prof.%20Pinto%20de%20Aguiar%20-%20Boca%20do%20Rio%2C%20Salvador%20-%20BA%2C%2041710-000!5e0!3m2!1spt-BR!2sbr!4v1603040721530!5m2!1spt-BR!2sbr" width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     </div>
-  </div>
-</div>
+  </div>   
 </body>
+
+
 
 <!-- footer -->
 <footer class="container-fluid text-center">
@@ -366,13 +372,10 @@ $(document).ready(function(){
     });
   });
 })
- 
 </script>
 
 </body>
 </html>
-
-
 <style>
 body {
 
@@ -398,7 +401,29 @@ body {
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
+  } 
+  h5 { 
+     font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 70px;
+
+  } 
+  h3 {
+    line-height: 1.375em;
+    margin-bottom: 30px;
+
   }  
+  button{
+    background:#f4511e; 
+    border-radius: 6px;
+    padding: 20px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 10px;"
+  }
 
   div #contact{
  	
@@ -659,4 +684,3 @@ body {
 
 
 
-  
